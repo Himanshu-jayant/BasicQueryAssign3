@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Events</title>
+</head>
+<body>
+
+<button id="btn">Button</button>
+<button id="hvr">Mouse Enter</button>
+<input type="text" id="focus" placeholder="focus"></input>
+<input type="text" id="copy" placeholder="copy"></input>
+<button id="mseout">mouseout</button>
+    <script src="jquery.js"></script>
+
+    <script>
+
+$("#btn").click(function ()
+    {
+     alert("Button Clicked");
+    });
+
+    $("#hvr").on('mouseenter',function ()
+    {
+        
+     alert("Mouse Enter");
+    });
+    $("#mseout").on('mouseout',function ()
+    {
+        
+     alert("Mouse Out");
+    });
+    $("#copy").on('copy',function ()
+    {
+     alert("Text Copied");
+    });
+
+    $("#focus").on('focus',function ()
+    {
+        $('#focus').css({
+         background: 'yellow',
+         color:'red'
+      });
+    });
+    $("#focus").on('focusout',function ()
+    {
+        $('#focus').css({
+         background: 'white'
+         
+      });
+      });
+
+    </script>
+</body>
+</html>
